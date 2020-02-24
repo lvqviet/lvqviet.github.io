@@ -13,12 +13,11 @@ body
 #app-cover
 {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     right: 0;
-    left: 0;
     width: 430px;
     height: 100px;
-    margin: -4px auto;
+    margin: 0 50px 80px 0;
 }
 
 #bg-artwork
@@ -29,11 +28,17 @@ body
     bottom: -30px;
     left: -30px;
     background-image: url("./Background/bg1.jpg");
+    /* Cách đổi hình nền
+        C1 : Tải ảnh về, để vào folder Background, thay bg1.jpg ở trên thành file ảnh mình vừa tải về
+            Ex : ảnh mới tải về đặt là bg2.jgp, background-image: url("./Background/bg2.jpg");
+        C2 : Tải ảnh yêu thích về, lưu ảnh đấy là bg1.jpg thì không cần phải thay đổi dòng background-image
+     */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+    /* Bỏ 2 dòng này đi để nó khỏi bị hiệu ứng blur*/
+    /*filter: blur(4px);*/
+    /*-webkit-filter: blur(4px);*/
     z-index: 1;
 }
 
@@ -44,8 +49,9 @@ body
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
-    opacity: 0.51;
+    /* Bỏ 2 dòng này để ảnh không bị mờ */
+    /*background-color: #fff;*/
+    /*opacity: 0.51;*/
     z-index: 2;
 }
 
