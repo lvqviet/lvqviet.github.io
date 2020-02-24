@@ -29,7 +29,12 @@ $(function()
         artist: "Fiona Fung",
 		name: "A Little Love",
 		url: "Musics/A Little Love.mp3",
-		picture: "./Background/67591990_2503289306624243_2045611683778396160_o.jpg"
+		picture: "./Background/anh1.jpg"
+    }, {
+        artist: "Avicii",
+		name: "The Nights",
+		url: "Musics/The Nights.mp3",
+		picture: "./Background/anh2.jpg"
     }];
 
 	function shuffle(a) {
