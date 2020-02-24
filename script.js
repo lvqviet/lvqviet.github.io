@@ -29,7 +29,7 @@ $(function()
         artist: "Fiona Fung",
 		name: "A Little Love",
 		url: "Musics/A Little Love.mp3",
-		picture: "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
+		picture: "./Background/bg1.jpg"
     }];
 
 	function shuffle(a) {
@@ -233,6 +233,7 @@ $(function()
 
             albumName.text(currAlbum);
             trackName.text(currTrackName);
+            albumArt.find('img').attr('src', currArtwork);
             $('#album-art img').prop('src', bgArtworkUrl);
         }
         else
