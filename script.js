@@ -1,3 +1,30 @@
+$("#volume").slider({
+    min: 0,
+    max: 100,
+    value: 0,
+      range: "min",
+    slide: function(event, ui) {
+      setVolume(ui.value / 100);
+    }
+  });
+  
+  var myMedia = document.createElement('audio');
+  $('#player').append(myMedia);
+  myMedia.id = "myMedia";
+  
+  function playAudio(fileName, myVolume) {
+          myMedia.src = fileName;
+          myMedia.setAttribute('loop', 'loop');
+      setVolume(myVolume);
+      myMedia.play();
+  }
+  
+  function setVolume(myVolume) {
+  var myMedia = document.getElementById('myMedia');
+  myMedia.volume = myVolume;
+  };
+
+
 $(function()
 {
     var playerTrack = $("#player-track");
@@ -31,7 +58,7 @@ $(function()
 		url: "Musics/A Little Love.mp3",
 		picture: "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
     }];
-	
+
 	function shuffle(a) {
 		var j, x, i;
 		for (i = a.length - 1; i > 0; i--) {
