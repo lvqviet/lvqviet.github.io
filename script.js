@@ -11,7 +11,9 @@ $(function()
 		trackTime = $('#track-time'),
 		insTime = $('#ins-time'),
 		sHover = $('#s-hover'),
-		playPauseButton = $("#play-pause-button"),
+        playPauseButton = $("#play-pause-button"),
+        playRepeatButton = $("#play-repeat"),
+        openMenu = $('#play-menu'),
 		i = playPauseButton.find('i'),
 		tProgress = $('#current-time'),
 		tTime = $('#track-length'),
@@ -107,7 +109,7 @@ $(function()
 		}
 		return a;
 	}
-	songs = shuffle(songs);
+	//songs = shuffle(songs);
 
     function playPause()
     {
@@ -133,6 +135,27 @@ $(function()
         },300);
     }
 
+
+    function playRepeat()
+    {
+        isRepeat = !isRepeat;
+        audio.loop = isRepeat;
+        toggleEnable(isRepeat, playRepeatButton);
+    }
+
+    function toggleEnable(condition, element)
+    {
+        if (condition)
+            element.addClass('isEnabled');
+        else
+            element.removeClass('isEnabled');
+    }
+    
+    function toggleMenu()
+    {
+        isOpen = !isOpen;
+        toggleEnable(isOpen, openMenu);
+    }
     	
 	function showHover(event)
 	{
@@ -254,12 +277,17 @@ $(function()
         },100);
     }
 
-    function selectTrack(flag)
+    function selectTrack(flag, index = null)
     {
-        if( flag == 0 || flag == 1 )
-            ++currIndex;
-        else
-            --currIndex;
+        if (index === null) {
+            if( flag == 0 || flag == 1 ) {
+                ++currIndex;
+            } else if (flag === -1) {
+                --currIndex;
+            }
+        } else {
+            currIndex = index;
+        }
 
         if( (currIndex > -1) && (currIndex < songs.length) )
         {
@@ -298,26 +326,31 @@ $(function()
 
             albumName.text(currAlbum);
             trackName.text(currTrackName);
-            albumArt.find('img').attr('src', currArtwork);
             $('#album-art img').prop('src', bgArtworkUrl);
+            $('.song').removeClass('playingSong');
+            $('#song' + currIndex).addClass('playingSong');
         }
         else
         {
-            if( flag == 0 || flag == 1 )
-                --currIndex;
-            else
-                ++currIndex;
+            if (currIndex < 0) {
+                currIndex = songs.length - 1;
+            } else if (currIndex > songs.length - 1) {
+                currIndex = 0;
+            }
+            selectTrack(2);
         }
     }
 
     function initPlayer()
 	{	
         audio = new Audio();
-
+        addSongList();
 		selectTrack(0);
 		
 		audio.loop = false;
-		
+        isRepeat = false;
+        isOpen = false;
+
 		playPauseButton.on('click',playPause);
 		
 		sArea.mousemove(function(event){ showHover(event); });
@@ -328,9 +361,40 @@ $(function()
 		
         $(audio).on('timeupdate',updateCurrTime);
 
-        playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
-        playNextTrackButton.on('click',function(){ selectTrack(1);});
-	}
+        playPreviousTrackButton.on('click',function(){
+            selectTrack(-1);
+        });
+        playNextTrackButton.on('click',function(){
+            selectTrack(1);
+        });
+        playRepeatButton.on('click', function(){
+            playRepeat();
+        });
+        openMenu.on('click', function(){
+            $("#list-song").fadeToggle(300);
+            toggleMenu();
+        });
+    }
+    
+
+    function addSongList() {
+        songs.forEach((song, index) => {
+            const songTemplate = 
+            `<div class="song" id="song${index}">
+                <i class="fas fa-play"></i>
+                <div class="info">
+                    ${song.name} - ${song.artist}
+                </div>
+            </div>`
+
+            $("#list-song").append(songTemplate);
+            $('#song' + index).on('click', () => {
+                selectTrack(0, index);
+                playPause();
+            });
+        })
+        
+    }
     
 	initPlayer();
 });
