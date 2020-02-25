@@ -35,6 +35,66 @@ $(function()
 		name: "The Nights",
 		url: "Musics/The Nights.mp3",
 		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "3 Chú Bộ Đội",
+		name: "Làm Người Yêu Anh Nhé Baby",
+		url: "Musics/3 Chú Bộ Đội - Làm Người Yêu Anh Nhé Baby.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Miu Lê",
+		name: "Anh Đang Nơi Đâu",
+		url: "Musics/Anh Dang Noi Dau - Miu Le.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Ariana Grande_ Jessie J_ Nicki Minaj",
+		name: "Bang Bang",
+		url: "Musics/Bang Bang - Ariana Grande_ Jessie J_ Nic [MP3 320kbps].mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "BIGBANG",
+		name: "Bang Bang Bang",
+		url: "Musics/Bang Bang Bang - BIGBANG.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Nishino Kana",
+		name: "Best Friend",
+		url: "Musics/Best Friend - Nishino Kana.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "BIGBANG",
+		name: "Haru Haru",
+		url: "Musics/Big Bang – Haru Haru.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Taylor Swift",
+		name: "Blank Space",
+		url: "Musics/Blank Space - Taylor Swift (www.YeuCaHat.com).mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Lynk Lee",
+		name: "Cô Gái Nông Thôn",
+		url: "Musics/Co Gai Nong Thon - Lynk Lee NQP.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Hoàng Tôn - Yanbi",
+		name: "Em Không Quay Về",
+		url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Nakamura Maiko",
+		name: "Endless Tears",
+		url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "Nicki Minaj - David Guetta",
+		name: "Hey Mama",
+		url: "Musics/Hey Mama-Nicki Minaj_[Nhacso.Net].mp3",
+		picture: "./Background/anh2.jpg"
+    }, {
+        artist: "911",
+		name: "I Do",
+		url: "Musics/I Do - 911.mp3",
+		picture: "./Background/anh2.jpg"
     }];
 
 	function shuffle(a) {
