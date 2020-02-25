@@ -13,10 +13,10 @@ body
 #app-cover
 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 0;
     left: 0;
-    width: 430px;
+    width: 570px;
     height: 100px;
     margin: -4px auto;
 }
@@ -318,7 +318,7 @@ body
 
 .control
 {
-    width: 33.333%;
+    width: 20%;
     float: left;
     padding: 12px 0;
 }
