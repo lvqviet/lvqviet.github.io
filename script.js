@@ -109,7 +109,7 @@ $(function()
 		}
 		return a;
 	}
-	songs = shuffle(songs);
+	//songs = shuffle(songs);
 
     function playPause()
     {
