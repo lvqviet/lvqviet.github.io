@@ -184,7 +184,7 @@ body
     position: relative;
     height: 100%;
     background-color: #fff;
-    box-shadow: 0 30px 80px #656565;
+    box-shadow: 0 30px 80px #46474c;
     border-radius: 15px;
     z-index: 2;
 }
