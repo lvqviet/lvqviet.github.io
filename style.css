@@ -63,7 +63,7 @@ body
     right: 15px;
     left: 15px;
     padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
+    background-color: #41444e6e;
     border-radius: 15px 15px 0 0;
     -webkit-transition: 0.3s ease top;
     transition: 0.3s ease top;
@@ -80,14 +80,14 @@ body
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-    color: #54576f;
+    color: #3b3d4c;
     font-size: 17px;
     font-weight: bold;
 }
 
 #track-name
 {
-    color: #acaebd;
+    color: #e4d1b5;
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
@@ -113,7 +113,7 @@ body
 {
     color: transparent;
     font-size: 11px;
-    background-color: #ffe8ee;
+    background-color: #41444e00;
     border-radius: 10px;
     -webkit-transition: 0.3s ease all;
     transition: 0.3s ease all;
@@ -121,7 +121,7 @@ body
 
 #track-time.active #current-time, #track-time.active #track-length
 {
-    color: #f86d92;
+    color: #f5e595;
     background-color: transparent;
 }
 
@@ -134,7 +134,7 @@ body
 
 #s-area
 {
-    background-color:#ffe8ee;
+    background-color:#e0d7f3;
     cursor: pointer;
 }
 
@@ -173,7 +173,7 @@ body
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #fd6d94;
+    background-color: #514966;
     -webkit-transition: 0.2s ease width;
     transition: 0.2s ease width;
     z-index: 1;
