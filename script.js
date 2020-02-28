@@ -41,7 +41,7 @@ $(function()
         artist: "3 Chú Bộ Đội",
 		name: "Làm Người Yêu Anh Nhé Baby",
 		url: "Musics/3 Chú Bộ Đội - Làm Người Yêu Anh Nhé Baby.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh3.jpg"
     }, {
         artist: "Miu Lê",
 		name: "Anh Đang Nơi Đâu",
@@ -56,7 +56,7 @@ $(function()
         artist: "BIGBANG",
 		name: "Bang Bang Bang",
 		url: "Musics/Bang Bang Bang - BIGBANG.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh5.jpg"
     }, {
         artist: "Nishino Kana",
 		name: "Best Friend",
@@ -66,7 +66,7 @@ $(function()
         artist: "BIGBANG",
 		name: "Haru Haru",
 		url: "Musics/Big Bang – Haru Haru.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh6.jpg"
     }, {
         artist: "Taylor Swift",
 		name: "Blank Space",
@@ -76,17 +76,17 @@ $(function()
         artist: "Lynk Lee",
 		name: "Cô Gái Nông Thôn",
 		url: "Musics/Co Gai Nong Thon - Lynk Lee NQP.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh4.jpg"
     }, {
         artist: "Hoàng Tôn - Yanbi",
 		name: "Em Không Quay Về",
 		url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh8.jpg"
     }, {
         artist: "Nakamura Maiko",
 		name: "Endless Tears",
 		url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh7.jpg"
     }, {
         artist: "Nicki Minaj - David Guetta",
 		name: "Hey Mama",
