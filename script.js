@@ -26,7 +26,7 @@ $(function()
 		artist: "Dig Didzay",
 		name: "Nếu Anh Đi (Cover)",
 		url: "Musics/NeuAnhDi.mp3",
-		picture: "./Background/bg1.jpg"
+		picture: "./Background/anh15.jpg"
 	}, {
         artist: "Fiona Fung",
 		name: "A Little Love",
@@ -36,7 +36,7 @@ $(function()
         artist: "Avicii",
 		name: "The Nights",
 		url: "Musics/The Nights.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh12.jpg"
     }, {
         artist: "3 Chú Bộ Đội",
 		name: "Làm Người Yêu Anh Nhé Baby",
@@ -46,7 +46,7 @@ $(function()
         artist: "Miu Lê",
 		name: "Anh Đang Nơi Đâu",
 		url: "Musics/Anh Dang Noi Dau - Miu Le.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh13.jpg"
     }, {
         artist: "Ariana Grande_ Jessie J_ Nicki Minaj",
 		name: "Bang Bang",
@@ -61,7 +61,7 @@ $(function()
         artist: "Nishino Kana",
 		name: "Best Friend",
 		url: "Musics/Best Friend - Nishino Kana.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh14.jpg"
     }, {
         artist: "BIGBANG",
 		name: "Haru Haru",
@@ -71,7 +71,7 @@ $(function()
         artist: "Taylor Swift",
 		name: "Blank Space",
 		url: "Musics/Blank Space - Taylor Swift (www.YeuCaHat.com).mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh9.jpg"
     }, {
         artist: "Lynk Lee",
 		name: "Cô Gái Nông Thôn",
@@ -91,12 +91,12 @@ $(function()
         artist: "Nicki Minaj - David Guetta",
 		name: "Hey Mama",
 		url: "Musics/Hey Mama-Nicki Minaj_[Nhacso.Net].mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh10.jpg"
     }, {
         artist: "911",
 		name: "I Do",
 		url: "Musics/I Do - 911.mp3",
-		picture: "./Background/anh2.jpg"
+		picture: "./Background/anh11.jpg"
     }];
 
 	function shuffle(a) {
