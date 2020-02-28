@@ -97,6 +97,91 @@ $(function()
 		name: "I Do",
 		url: "Musics/I Do - 911.mp3",
 		picture: "./Background/anh11.jpg"
+    }, {
+        artist: "Quân A.P",
+		name: "Ai Là Người Thương Em",
+		url: "Musics/Ai La Nguoi Thuong Em - Quan A_P.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Mỹ Tâm",
+		name: "Anh Đợi Em Được Không",
+		url: "Musics/Anh Doi Em Duoc Khong - My Tam.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "HuyR",
+		name: "Anh Thanh Niên",
+		url: "Musics/Anh Thanh Nien - HuyR.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Phan Mạnh Quỳnh",
+		name: "Có Chàng Trai Viết Lên Cây",
+		url: "Musics/Co Chang Trai Viet Len Cay - Phan Manh Q.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Đức Phúc",
+		name: "Hơn Cả Yêu",
+		url: "Musics/Hon Ca Yeu - Duc Phuc.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Vu Tử Bối",
+		name: "Hôn Khắp Nơi",
+		url: "Musics/Hon khap noi - Vu Tu Boi cover.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Ngọt",
+		name: "Lần Cuối",
+		url: "Musics/Lan Cuoi - Ngot.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Passenger",
+		name: "Let Her Go",
+		url: "Musics/Let Her Go - Passenger.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Demi Lovato",
+		name: "Let It Go",
+		url: "Musics/Let It Go Demi Lovato - Demi Lovato.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trang Hàn_Hoàng Thống_TDK",
+		name: "Lonely Love",
+		url: "Musics/Lonely Love - Trang Han_ Hoang Thong_ Tr.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "The Sheep",
+		name: "Người Ta Thành Đôi Hết Rồi",
+		url: "Musics/Nguoi Ta Thanh Doi Het Roi - The Sheep_.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Mỹ Tâm",
+		name: "Nơi Mình Dừng Chân",
+		url: "Musics/Noi Minh Dung Chan - My Tam.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Chanyeol_Punch",
+		name: "Stay With Me",
+		url: "Musics/Stay With Me - Chanyeol_ Punch.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Yanbi_Mr T_Hằng Bingboong",
+		name: "Thu Cuối",
+		url: "Musics/Thu Cu i - Yanbi Mr T H ng BingBoong.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Phan Mạnh Quỳnh",
+		name: "Từ Đó",
+		url: "Musics/Tu Do - Phan Manh Quynh.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Avicii",
+		name: "Wake Me Up",
+		url: "Musics/Wake Me Up Avicii - Avicii.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "The Sheep",
+		name: "Yêu Như Ngày Hôm Qua",
+		url: "Musics/Yeu Nhu Ngay Hom Qua - The Sheep.mp3",
+		picture: "./Background/anh8.jpg"
     }];
 
 	function shuffle(a) {
