@@ -383,14 +383,14 @@ body
 #message {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3.8rem;
-    color: #f86d92;
+    color: #747d8e;
     font-style: italic;
     font-weight: 700;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 9rem;
-    z-index: 10;
+    margin-top: 34rem;
+    z-index: 3;
     position: relative;
 }
 
@@ -461,4 +461,19 @@ body
 {
     border-radius: 15px;
     background-color: #6a6d70;
+}
+
+button{
+    position: absolute;
+    background-color: #98caea;
+    top: 665px;
+    left: 800px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+#button-yes {
+    left: 700px;
 }

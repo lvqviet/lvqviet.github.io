@@ -484,3 +484,16 @@ $(function()
     
 	initPlayer();
 });
+
+$(function(){
+    $("#button-no").on({
+        mouseover:function(){
+            $(this).css({
+                left:(Math.random()*100)+"%",
+                top:(Math.random()*100)+"%",
+                position: "absolute",
+                transition: "all 0.1s ease",
+            });
+        }
+    });
+});
