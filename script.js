@@ -497,3 +497,10 @@ $(function(){
         }
     });
 });
+
+const buttonYes = document.querySelector('#button-yes');
+const message = document.querySelector('#message');
+
+buttonYes.onclick = () => {
+    message.innerText = "Thanks, I Love You <3";
+}
