@@ -499,8 +499,22 @@ $(function(){
 });
 
 const buttonYes = document.querySelector('#button-yes');
+const buttonNo = document.querySelector('#button-no');
 const message = document.querySelector('#message');
+const divBg = document.querySelector("#bg-artwork"); 
 
 buttonYes.onclick = () => {
     message.innerText = "Thanks, I Love You <3";
+    buttonYes.setAttribute("style", "display: none")
+    buttonNo.setAttribute("style", "display: none")
+}
+
+function changeBg(fileName) {
+    if(fileName) {
+        const valueStyle = "background-image: url('" + fileName + "');";
+        divBg.setAttribute("style", valueStyle + "background-position: 50% 20%")      
+    }
+    else {
+        divBg.setAttribute("style", "background-position: 50%")
+    }
 }

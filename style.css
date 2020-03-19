@@ -383,7 +383,7 @@ body
 #message {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3.8rem;
-    color: #747d8e;
+    color: #000000;
     font-style: italic;
     font-weight: 700;
     display: flex;
@@ -463,9 +463,9 @@ body
     background-color: #6a6d70;
 }
 
-button{
+#button-no {
     position: absolute;
-    background-color: #98caea;
+    background-color: #ffffff;
     top: 665px;
     left: 800px;
     width: 80px;
@@ -475,5 +475,27 @@ button{
 }
 
 #button-yes {
-    left: 700px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 665px;
+    left: 650px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.change-bg {
+    position: absolute;
+    top: 635px;
+    left: 10px;
+    width: 110px;
+    height: 70px;
+    box-shadow: 5px 5px 10px 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#change-bg2 {
+    left: 140px;
 }
