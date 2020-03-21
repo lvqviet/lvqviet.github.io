@@ -498,11 +498,11 @@ $(function(){
     });
 });
 
-const buttonYes = document.querySelector('#button-yes');
-const buttonNo = document.querySelector('#button-no');
-const message = document.querySelector('#message');
-const divBg = document.querySelector("#bg-artwork"); 
-const dropdownList = Array.from(document.querySelectorAll('.dropdown'));
+const buttonYes = document.querySelector('#button-yes'),
+      buttonNo = document.querySelector('#button-no'),
+      message = document.querySelector('#message'),
+      divBg = document.querySelector("#bg-artwork"), 
+      dropdownList = Array.from(document.querySelectorAll('.dropdown'));
 
 
 buttonYes.onclick = () => {
@@ -534,3 +534,26 @@ dropdownList.forEach(
         });
     }
 )
+
+window.addEventListener("keyup", hide, false);
+window.addEventListener("keyup", appear, false);
+
+function hide(key) {
+    if (key.keyCode == '70') {
+        const dropdown = document.querySelector(".dropdown");
+        dropdown.setAttribute("style", "display: none")
+        message.setAttribute("style", "display: none")
+        buttonYes.setAttribute("style", "display: none")
+        buttonNo.setAttribute("style", "display: none")
+    }
+}
+
+function appear(key) {
+    if (key.keyCode == '68') {
+        const dropdown = document.querySelector(".dropdown");
+        dropdown.setAttribute("style", "")
+        message.setAttribute("style", "")
+        buttonYes.setAttribute("style", "")
+        buttonNo.setAttribute("style", "")
+    }
+}
