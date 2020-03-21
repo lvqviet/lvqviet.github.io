@@ -73,8 +73,14 @@
     </div>
     <button id="button-no">No</button>
     <button id="button-yes">Yes</button>
-    <img class="change-bg" id="change-bg1" src="./Background/bg1.jpg" alt="background" onclick="changeBg('./Background/bg1.jpg')">
-    <img class="change-bg" id="change-bg2" src="./Background/bg2.jpg" alt="background" onclick="changeBg('')">
+    <div class="dropdown">
+        <button class="btn">Change Background</button>
+        <ul class="dropdown-menu">
+            <li><img class="change-bg" id="change-bg1" src="./Background/bg1.jpg" alt="background" onclick="changeBg('./Background/bg1.jpg')"></li>
+            <li><img class="change-bg" id="change-bg2" src="./Background/bg2.jpg" alt="background" onclick="changeBg('')"></li>
+        </ul>
+    </div>
+    
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
     

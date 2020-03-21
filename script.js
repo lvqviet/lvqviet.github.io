@@ -502,11 +502,14 @@ const buttonYes = document.querySelector('#button-yes');
 const buttonNo = document.querySelector('#button-no');
 const message = document.querySelector('#message');
 const divBg = document.querySelector("#bg-artwork"); 
+const dropdownList = Array.from(document.querySelectorAll('.dropdown'));
+
 
 buttonYes.onclick = () => {
     message.innerText = "Thanks, I Love You <3";
     buttonYes.setAttribute("style", "display: none")
     buttonNo.setAttribute("style", "display: none")
+    //buttonNo.style.display = 'none';
 }
 
 function changeBg(fileName) {
@@ -518,3 +521,16 @@ function changeBg(fileName) {
         divBg.setAttribute("style", "background-position: 50%")
     }
 }
+
+dropdownList.forEach(
+    function(el, idx) {
+        const btn = el.querySelector('.btn');
+        btn.addEventListener('click', function(event) {
+            if (el.classList.value.indexOf('open') === -1) {
+                el.classList.add('open');
+            } else {
+                el.classList.remove('open');
+            }
+        });
+    }
+)
