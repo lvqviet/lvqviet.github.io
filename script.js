@@ -550,10 +550,17 @@ function hide(key) {
 
 function appear(key) {
     if (key.keyCode == '68') {
-        const dropdown = document.querySelector(".dropdown");
-        dropdown.setAttribute("style", "")
-        message.setAttribute("style", "")
-        buttonYes.setAttribute("style", "")
-        buttonNo.setAttribute("style", "")
+        if(message.innerHTML == "Thanks, I Love You &lt;3") {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.setAttribute("style", "")
+            message.setAttribute("style", "")
+        }
+        else {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.setAttribute("style", "")
+            message.setAttribute("style", "")
+            buttonYes.setAttribute("style", "")
+            buttonNo.setAttribute("style", "")    
+        }
     }
 }
