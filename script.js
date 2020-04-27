@@ -501,6 +501,7 @@ $(function(){
 const buttonYes = document.querySelector('#button-yes'),
       buttonNo = document.querySelector('#button-no'),
       message = document.querySelector('#message'),
+      hideshow = document.querySelector('#hide-show'),
       divBg = document.querySelector("#bg-artwork"), 
       dropdownList = Array.from(document.querySelectorAll('.dropdown'));
 
@@ -545,6 +546,7 @@ function hide(key) {
         message.setAttribute("style", "display: none")
         buttonYes.setAttribute("style", "display: none")
         buttonNo.setAttribute("style", "display: none")
+        hideshow.setAttribute("style", "display:none")
     }
 }
 
@@ -554,11 +556,13 @@ function appear(key) {
             const dropdown = document.querySelector(".dropdown");
             dropdown.setAttribute("style", "")
             message.setAttribute("style", "")
+            hideshow.setAttribute("style", "")
         }
         else {
             const dropdown = document.querySelector(".dropdown");
             dropdown.setAttribute("style", "")
             message.setAttribute("style", "")
+            hideshow.setAttribute("style", "")
             buttonYes.setAttribute("style", "")
             buttonNo.setAttribute("style", "")    
         }

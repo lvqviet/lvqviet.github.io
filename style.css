@@ -389,7 +389,7 @@ body
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 34rem;
+    margin-top: 36.5rem;
     z-index: 3;
     position: relative;
 }
@@ -466,8 +466,9 @@ body
 #button-no {
     position: absolute;
     background-color: #ffffff;
-    top: 665px;
-    left: 800px;
+    margin-top: 20px;
+    margin-left: 20px;
+    left: 50%;
     width: 80px;
     height: 30px;
     border-radius: 20px;
@@ -478,8 +479,8 @@ body
 #button-yes {
     position: absolute;
     background-color: #ffffff;
-    top: 665px;
-    left: 650px;
+    margin-top: 20px;
+    left: 42%;
     width: 80px;
     height: 30px;
     border-radius: 20px;
@@ -497,9 +498,9 @@ body
 }
 
 .dropdown {
-    position: relative;
+    position: fixed;
     width: 161px;
-    top: 0px;
+    top: 625px;
     left: 0px;
     z-index: 3;
 }
@@ -534,3 +535,16 @@ body
 .dropdown .dropdown-menu li {
     padding: 8px 15px;
 }
+
+#hide-show {
+    position: relative;
+    margin: 10px;
+    bottom: 60px;
+    z-index: 3;
+}
+
+@media only screen and (max-width: 580px){
+    #message, #buttonYes, #buttonNo, #hide-show {
+        display: none;
+    }
+  }
