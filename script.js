@@ -182,6 +182,96 @@ $(function()
 		name: "Yêu Như Ngày Hôm Qua",
 		url: "Musics/Yeu Nhu Ngay Hom Qua - The Sheep.mp3",
 		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trung Quân",
+		name: "Chiều Nay Không Có Mưa Bay",
+		url: "Musics/Chieu Nay Khong Co Mua Bay - Trung Quan.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Nguyễn Hải Phong",
+		name: "Dòng Thời Gian",
+		url: "Musics/Dong Thoi Gian - Nguyen Hai Phong.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Mr. Siro",
+		name: "Dưới Những Cơn Mưa",
+		url: "Musics/Dưới Những Cơn Mưa - Mr. Siro _ Bài hát, lyrics.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Michael Jackson",
+		name: "Heal The World",
+		url: "Musics/Heal The World - Michael Jackson.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Kenshi Yonezu",
+		name: "Lemon",
+		url: "Musics/Lemon - Kenshi Yonezu.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trịnh Thăng Bình",
+		name: "Người Ấy",
+		url: "Musics/Nguoi Ay - Trinh Thang Binh.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Lynk Lee",
+		name: "Ngày Ấy Bạn Và tôi",
+		url: "Musics/Ngày Ấy Bạn Và Tôi - Lynk Lee.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Hoàng Yến Chibi",
+		name: "Ngây Ngô",
+		url: "Musics/Ngây Ngô - Hoàng Yến Chibi.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Lambsey",
+		name: "PLANET",
+		url: "Musics/PLANET - Lambsey.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "KenshiWiz KhalifaYonezu",
+		name: "See You Again",
+		url: "Musics/See You Again-Wiz Khalifa_[Nhacso.Net].mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Michael Jackson",
+		name: "Smooth Criminal",
+		url: "Musics/Smooth Criminal - Michael Jackson.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trịnh Đình Quang",
+		name: "Thất Tình",
+		url: "Musics/That Tinh - Trinh Dinh Quang.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trịnh Thăng Bình",
+		name: "Tâm Sự Tuổi 30",
+		url: "Musics/Tâm Sự Tuổi 30 (Ông Ngoại Tuổi 30 OST) - Trịnh Thăng Bình.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Daoko - Kenshi Yonezu",
+		name: "Uchiage Hanabi",
+		url: "Musics/Uchiage Hanabi - Daoko, Kenshi Yonezu.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Trúc Nhân",
+		name: "Vẽ",
+		url: "Musics/Ve Acoustic Version_ - Truc Nhan.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Enrique Iglesias",
+		name: "Why Not Me",
+		url: "Musics/Why Not Me.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Michael Jackson",
+		name: "You Are Not Alone",
+		url: "Musics/YouAreNotAlone_MichaelJackson_nb.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Sơn Tùng M-TP",
+		name: "Âm Thầm Bên Em",
+		url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
+		picture: "./Background/anh8.jpg"
     }];
 
 	function shuffle(a) {

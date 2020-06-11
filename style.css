@@ -224,7 +224,7 @@ body
     background-color: #d6dee7;
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px #fff;
-    z-index: 2;
+    z-index: 1; /*bo hinh tron o giua */
 }
 
 #album-art img
