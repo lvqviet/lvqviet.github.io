@@ -272,6 +272,11 @@ $(function()
 		name: "Âm Thầm Bên Em",
 		url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
 		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Fiona Fung",
+		name: "Proud Of You",
+		url: "Musics/Proud of You.mp3",
+		picture: "./Background/anh8.jpg"
     }];
 
 	function shuffle(a) {
