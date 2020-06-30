@@ -23,16 +23,116 @@ $(function()
 	var playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 	
 	var songs = [{
-		artist: "Dig Didzay",
-		name: "Nếu Anh Đi (Cover)",
-		url: "Musics/NeuAnhDi.mp3",
+        artist: "Trung Quân",
+		name: "Chiều Nay Không Có Mưa Bay",
+		url: "Musics/Chieu Nay Khong Co Mua Bay - Trung Quan.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Sơn Tùng M-TP",
+		name: "Âm Thầm Bên Em",
+		url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "The Sheep",
+		name: "Người Ta Thành Đôi Hết Rồi",
+		url: "Musics/Nguoi Ta Thanh Doi Het Roi - The Sheep_.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+		artist: "Min",
+		name: "Y.Ê.U",
+		url: "Musics/Y E U Acoustic Version - Min.mp3",
 		picture: "./Background/anh15.jpg"
 	}, {
+		artist: "Charlie Puth",
+		name: "One Call Away",
+		url: "Musics/One Call Away - Charlie Puth [MP3 320kbps].mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+        artist: "Daoko - Kenshi Yonezu",
+		name: "Uchiage Hanabi",
+		url: "Musics/Uchiage Hanabi - Daoko, Kenshi Yonezu.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Vu Tử Bối",
+		name: "Hôn Khắp Nơi",
+		url: "Musics/Hon khap noi - Vu Tu Boi cover.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Nakamura Maiko",
+		name: "Endless Tears",
+		url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
+		picture: "./Background/anh7.jpg"
+    }, {
         artist: "Fiona Fung",
 		name: "A Little Love",
 		url: "Musics/A Little Love.mp3",
 		picture: "./Background/anh1.jpg"
     }, {
+		artist: "Lost Frequencies, Janieck Devy",
+		name: "Reality",
+		url: "Musics/Reality - Lost Frequencies, Janieck Devy.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+		artist: "Bích Phương",
+		name: "Mình Yêu Nhau Đi",
+		url: "Musics/Minh Yeu Nhau Di - Bich Phuong.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+		artist: "Kha",
+		name: "Em Có Nghe",
+		url: "Musics/Em Co Nghe - Kha.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+        artist: "911",
+		name: "I Do",
+		url: "Musics/I Do - 911.mp3",
+		picture: "./Background/anh11.jpg"
+    }, {
+        artist: "HuyR",
+		name: "Anh Thanh Niên",
+		url: "Musics/Anh Thanh Nien - HuyR.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+		artist: "Tiên Tiên",
+		name: "My Everything",
+		url: "Musics/My Everything - Tiên Tiên.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+        artist: "Ngọt",
+		name: "Lần Cuối",
+		url: "Musics/Lan Cuoi - Ngot.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+		artist: "Alan Walker, Sabrina Carpent",
+		name: "On My Way",
+		url: "Musics/On My Way - Alan Walker_ Sabrina Carpent.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
+        artist: "Trịnh Thăng Bình",
+		name: "Người Ấy",
+		url: "Musics/Nguoi Ay - Trinh Thang Binh.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Hoàng Tôn - Yanbi",
+		name: "Em Không Quay Về",
+		url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Passenger",
+		name: "Let Her Go",
+		url: "Musics/Let Her Go - Passenger.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+        artist: "Michael Jackson",
+		name: "You Are Not Alone",
+		url: "Musics/YouAreNotAlone_MichaelJackson_nb.mp3",
+		picture: "./Background/anh8.jpg"
+    }, {
+		artist: "Dig Didzay",
+		name: "Nếu Anh Đi (Cover)",
+		url: "Musics/NeuAnhDi.mp3",
+		picture: "./Background/anh8.jpg"
+	}, {
         artist: "Avicii",
 		name: "The Nights",
 		url: "Musics/The Nights.mp3",
@@ -47,11 +147,6 @@ $(function()
 		name: "Anh Đang Nơi Đâu",
 		url: "Musics/Anh Dang Noi Dau - Miu Le.mp3",
 		picture: "./Background/anh13.jpg"
-    }, {
-        artist: "Ariana Grande_ Jessie J_ Nicki Minaj",
-		name: "Bang Bang",
-		url: "Musics/Bang Bang - Ariana Grande_ Jessie J_ Nic [MP3 320kbps].mp3",
-		picture: "./Background/anh2.jpg"
     }, {
         artist: "BIGBANG",
 		name: "Bang Bang Bang",
@@ -78,25 +173,10 @@ $(function()
 		url: "Musics/Co Gai Nong Thon - Lynk Lee NQP.mp3",
 		picture: "./Background/anh4.jpg"
     }, {
-        artist: "Hoàng Tôn - Yanbi",
-		name: "Em Không Quay Về",
-		url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "Nakamura Maiko",
-		name: "Endless Tears",
-		url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
-		picture: "./Background/anh7.jpg"
-    }, {
         artist: "Nicki Minaj - David Guetta",
 		name: "Hey Mama",
 		url: "Musics/Hey Mama-Nicki Minaj_[Nhacso.Net].mp3",
 		picture: "./Background/anh10.jpg"
-    }, {
-        artist: "911",
-		name: "I Do",
-		url: "Musics/I Do - 911.mp3",
-		picture: "./Background/anh11.jpg"
     }, {
         artist: "Quân A.P",
 		name: "Ai Là Người Thương Em",
@@ -106,11 +186,6 @@ $(function()
         artist: "Mỹ Tâm",
 		name: "Anh Đợi Em Được Không",
 		url: "Musics/Anh Doi Em Duoc Khong - My Tam.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "HuyR",
-		name: "Anh Thanh Niên",
-		url: "Musics/Anh Thanh Nien - HuyR.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
         artist: "Phan Mạnh Quỳnh",
@@ -123,21 +198,6 @@ $(function()
 		url: "Musics/Hon Ca Yeu - Duc Phuc.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
-        artist: "Vu Tử Bối",
-		name: "Hôn Khắp Nơi",
-		url: "Musics/Hon khap noi - Vu Tu Boi cover.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "Ngọt",
-		name: "Lần Cuối",
-		url: "Musics/Lan Cuoi - Ngot.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "Passenger",
-		name: "Let Her Go",
-		url: "Musics/Let Her Go - Passenger.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
         artist: "Demi Lovato",
 		name: "Let It Go",
 		url: "Musics/Let It Go Demi Lovato - Demi Lovato.mp3",
@@ -146,11 +206,6 @@ $(function()
         artist: "Trang Hàn_Hoàng Thống_TDK",
 		name: "Lonely Love",
 		url: "Musics/Lonely Love - Trang Han_ Hoang Thong_ Tr.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "The Sheep",
-		name: "Người Ta Thành Đôi Hết Rồi",
-		url: "Musics/Nguoi Ta Thanh Doi Het Roi - The Sheep_.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
         artist: "Mỹ Tâm",
@@ -183,11 +238,6 @@ $(function()
 		url: "Musics/Yeu Nhu Ngay Hom Qua - The Sheep.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
-        artist: "Trung Quân",
-		name: "Chiều Nay Không Có Mưa Bay",
-		url: "Musics/Chieu Nay Khong Co Mua Bay - Trung Quan.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
         artist: "Nguyễn Hải Phong",
 		name: "Dòng Thời Gian",
 		url: "Musics/Dong Thoi Gian - Nguyen Hai Phong.mp3",
@@ -206,11 +256,6 @@ $(function()
         artist: "Kenshi Yonezu",
 		name: "Lemon",
 		url: "Musics/Lemon - Kenshi Yonezu.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "Trịnh Thăng Bình",
-		name: "Người Ấy",
-		url: "Musics/Nguoi Ay - Trinh Thang Binh.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
         artist: "Lynk Lee",
@@ -248,11 +293,6 @@ $(function()
 		url: "Musics/Tâm Sự Tuổi 30 (Ông Ngoại Tuổi 30 OST) - Trịnh Thăng Bình.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
-        artist: "Daoko - Kenshi Yonezu",
-		name: "Uchiage Hanabi",
-		url: "Musics/Uchiage Hanabi - Daoko, Kenshi Yonezu.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
         artist: "Trúc Nhân",
 		name: "Vẽ",
 		url: "Musics/Ve Acoustic Version_ - Truc Nhan.mp3",
@@ -263,16 +303,6 @@ $(function()
 		url: "Musics/Why Not Me.mp3",
 		picture: "./Background/anh8.jpg"
     }, {
-        artist: "Michael Jackson",
-		name: "You Are Not Alone",
-		url: "Musics/YouAreNotAlone_MichaelJackson_nb.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
-        artist: "Sơn Tùng M-TP",
-		name: "Âm Thầm Bên Em",
-		url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
-		picture: "./Background/anh8.jpg"
-    }, {
         artist: "Fiona Fung",
 		name: "Proud Of You",
 		url: "Musics/Proud of You.mp3",
@@ -281,8 +311,9 @@ $(function()
 
 	function shuffle(a) {
 		var j, x, i;
-		for (i = a.length - 1; i > 0; i--) {
-			j = Math.floor(Math.random() * (i + 1));
+		for (i = a.length - 1; i > 20; i--) { 
+            //j = Math.floor(Math.random() * (i + 1)); //sort all
+            j = Math.floor(Math.random() * (i - 21 + 1)) + 21; // sort from 21 to end
 			x = a[i];
 			a[i] = a[j];
 			a[j] = x;
