@@ -386,7 +386,7 @@ $(function () {
     var j, x, i;
     for (i = a.length - 1; i > 20; i--) {
       //j = Math.floor(Math.random() * (i + 1)); //sort all
-      j = Math.floor(Math.random() * (i - 21 + 1)) + 21; // sort from 21 to end
+      j = Math.floor(Math.random() * (i - 21 + 1)) + 21; // sort from 21 to end. **secret**
       x = a[i];
       a[i] = a[j];
       a[j] = x;
@@ -654,12 +654,12 @@ $(function () {
   });
 });
 
-const buttonYes = document.querySelector("#button-yes"),
-  buttonNo = document.querySelector("#button-no"),
-  message = document.querySelector("#message"),
-  hideshow = document.querySelector("#hide-show"),
-  divBg = document.querySelector("#bg-artwork"),
-  dropdownList = Array.from(document.querySelectorAll(".dropdown"));
+const buttonYes = document.querySelector("#button-yes");
+const buttonNo = document.querySelector("#button-no");
+const message = document.querySelector("#message");
+const hideshow = document.querySelector("#hide-show");
+const divBg = document.querySelector(".bg-artwork");
+const changeBg = document.querySelector(".change-bg");
 
 buttonYes.onclick = () => {
   message.innerText = "Thanks, I Love You <3";
@@ -668,33 +668,24 @@ buttonYes.onclick = () => {
   //buttonNo.style.display = 'none';
 };
 
-function changeBg(fileName) {
-  if (fileName) {
-    const valueStyle = "background-image: url('" + fileName + "');";
+changeBg.onclick = () => {
+  if (divBg.id === "1") {
+    const valueStyle =
+      "background-image: url('" + "./Background/bg1.jpg" + "');";
     divBg.setAttribute("style", valueStyle + "background-position: 50% 20%");
+    divBg.id = "2";
   } else {
     divBg.setAttribute("style", "background-position: 50%");
+    divBg.id = "1";
   }
-}
-
-dropdownList.forEach(function (el, idx) {
-  const btn = el.querySelector(".btn");
-  btn.addEventListener("click", function (event) {
-    if (el.classList.value.indexOf("open") === -1) {
-      el.classList.add("open");
-    } else {
-      el.classList.remove("open");
-    }
-  });
-});
+};
 
 window.addEventListener("keyup", hide, false);
 window.addEventListener("keyup", appear, false);
 
 function hide(key) {
   if (key.keyCode == "70") {
-    const dropdown = document.querySelector(".dropdown");
-    dropdown.setAttribute("style", "display: none");
+    changeBg.setAttribute("style", "display: none");
     message.setAttribute("style", "display: none");
     buttonYes.setAttribute("style", "display: none");
     buttonNo.setAttribute("style", "display: none");
@@ -705,13 +696,11 @@ function hide(key) {
 function appear(key) {
   if (key.keyCode == "68") {
     if (message.innerHTML == "Thanks, I Love You &lt;3") {
-      const dropdown = document.querySelector(".dropdown");
-      dropdown.setAttribute("style", "");
+      changeBg.setAttribute("style", "");
       message.setAttribute("style", "");
       hideshow.setAttribute("style", "");
     } else {
-      const dropdown = document.querySelector(".dropdown");
-      dropdown.setAttribute("style", "");
+      changeBg.setAttribute("style", "");
       message.setAttribute("style", "");
       hideshow.setAttribute("style", "");
       buttonYes.setAttribute("style", "");
@@ -719,3 +708,5 @@ function appear(key) {
     }
   }
 }
+
+console.log("I have a little secret, can you find it? (☞ﾟヮﾟ)☞");

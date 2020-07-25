@@ -18,7 +18,7 @@ body {
   margin: -4px auto;
 }
 
-#bg-artwork {
+.bg-artwork {
   position: fixed;
   top: -30px;
   right: -30px;
@@ -461,57 +461,19 @@ body {
 
 .change-bg {
   position: relative;
-  width: 110px;
-  height: 70px;
-  box-shadow: 5px 5px 10px 0;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.dropdown {
-  position: fixed;
-  width: 161px;
-  top: 625px;
-  left: 0px;
-  z-index: 3;
-  animation-duration: 4s;
-}
-
-.dropdown .btn {
   background-color: #fff;
   border: 0;
   padding: 8px 15px;
-  width: 100%;
   border-radius: 3px;
   cursor: pointer;
   box-shadow: 3px 3px 10px 0;
-}
-
-.dropdown .dropdown-menu {
-  position: absolute;
-  display: none;
-  background-color: #fff;
-  left: 100%;
-  top: -149px;
-  margin: 1px;
-  padding: 0px;
-  list-style-type: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px 0;
-}
-
-.dropdown.open .dropdown-menu {
-  display: block;
-}
-
-.dropdown .dropdown-menu li {
-  padding: 8px 15px;
+  z-index: 3;
 }
 
 #hide-show {
   position: relative;
-  margin: 10px;
-  bottom: 60px;
+  left: -145px;
+  bottom: 35px;
   z-index: 3;
 }
 
