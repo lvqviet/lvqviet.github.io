@@ -379,6 +379,12 @@ $(function () {
       url: "Musics/Proud of You.mp3",
       picture: "./Background/anh8.jpg",
     },
+    {
+      artist: "Da LAB - Miu Lê",
+      name: "Gác Lại Âu Lo",
+      url: "Musics/Gac Lai Au Lo - Da LAB_ Miu Le.mp3",
+      picture: "./Background/anh8.jpg",
+    },
   ];
 
   function shuffle(a) {
