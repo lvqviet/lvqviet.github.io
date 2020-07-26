@@ -358,8 +358,7 @@ $(function () {
     {
       artist: "Trịnh Thăng Bình",
       name: "Tâm Sự Tuổi 30",
-      url:
-        "Musics/Tâm Sự Tuổi 30 (Ông Ngoại Tuổi 30 OST) - Trịnh Thăng Bình.mp3",
+      url: "Musics/Tâm Sự Tuổi 30 (Ông Ngoại Tuổi 30 OST) - Trịnh Thăng Bình.mp3",
       picture: "./Background/anh8.jpg",
     },
     {
@@ -495,12 +494,7 @@ $(function () {
     if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
     else tTime.text(durMinutes + ":" + durSeconds);
 
-    if (
-      isNaN(curMinutes) ||
-      isNaN(curSeconds) ||
-      isNaN(durMinutes) ||
-      isNaN(durSeconds)
-    )
+    if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
       trackTime.removeClass("active");
     else trackTime.addClass("active");
 
@@ -670,9 +664,11 @@ buttonYes.onclick = () => {
 
 changeBg.onclick = () => {
   if (divBg.id === "1") {
-    const valueStyle =
-      "background-image: url('" + "./Background/bg1.jpg" + "');";
-    divBg.setAttribute("style", valueStyle + "background-position: 50% 20%");
+    divBg.setAttribute(
+      "style",
+      'background-image: url("./Background/bg1.jpg"); background-position: 50% 20%'
+    );
+    //$(".bg-artwork").css("background-image", 'url("./Background/bg1.jpg")'); cach dung jQuery
     divBg.id = "2";
   } else {
     divBg.setAttribute("style", "background-position: 50%");
@@ -681,30 +677,30 @@ changeBg.onclick = () => {
 };
 
 window.addEventListener("keyup", hide, false);
-window.addEventListener("keyup", appear, false);
+window.addEventListener("keyup", show, false);
 
 function hide(key) {
   if (key.keyCode == "70") {
-    changeBg.setAttribute("style", "display: none");
-    message.setAttribute("style", "display: none");
-    buttonYes.setAttribute("style", "display: none");
-    buttonNo.setAttribute("style", "display: none");
-    hideshow.setAttribute("style", "display:none");
+    changeBg.setAttribute("style", "opacity: 0%; animation: fade 1s;");
+    message.setAttribute("style", "opacity: 0%; animation: fade 1s;");
+    buttonYes.setAttribute("style", "opacity: 0%; animation: fade 1s;");
+    buttonNo.setAttribute("style", "opacity: 0%; animation: fade 1s;");
+    hideshow.setAttribute("style", "opacity: 0%; animation: fade 1s;");
   }
 }
 
-function appear(key) {
+function show(key) {
   if (key.keyCode == "68") {
     if (message.innerHTML == "Thanks, I Love You &lt;3") {
-      changeBg.setAttribute("style", "");
-      message.setAttribute("style", "");
-      hideshow.setAttribute("style", "");
+      changeBg.setAttribute("style", "animation: show 2s;");
+      message.setAttribute("style", "animation: show 2s;");
+      hideshow.setAttribute("style", "animation: show 2s;");
     } else {
-      changeBg.setAttribute("style", "");
-      message.setAttribute("style", "");
-      hideshow.setAttribute("style", "");
-      buttonYes.setAttribute("style", "");
-      buttonNo.setAttribute("style", "");
+      changeBg.setAttribute("style", "animation: show 2s;");
+      message.setAttribute("style", "animation: show 2s;");
+      hideshow.setAttribute("style", "animation: show 2s;");
+      buttonYes.setAttribute("style", "animation: show 2s;");
+      buttonNo.setAttribute("style", "animation: show 2s;");
     }
   }
 }
