@@ -38,132 +38,6 @@ $(function () {
 
   var songs = [
     {
-      artist: "Trung Quân",
-      name: "Chiều Nay Không Có Mưa Bay",
-      url: "Musics/Chieu Nay Khong Co Mua Bay - Trung Quan.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Sơn Tùng M-TP",
-      name: "Âm Thầm Bên Em",
-      url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "The Sheep",
-      name: "Người Ta Thành Đôi Hết Rồi",
-      url: "Musics/Nguoi Ta Thanh Doi Het Roi - The Sheep_.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Min",
-      name: "Y.Ê.U",
-      url: "Musics/Y E U Acoustic Version - Min.mp3",
-      picture: "./Background/anh15.jpg",
-    },
-    {
-      artist: "Charlie Puth",
-      name: "One Call Away",
-      url: "Musics/One Call Away - Charlie Puth [MP3 320kbps].mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Daoko - Kenshi Yonezu",
-      name: "Uchiage Hanabi",
-      url: "Musics/Uchiage Hanabi - Daoko, Kenshi Yonezu.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Vu Tử Bối",
-      name: "Hôn Khắp Nơi",
-      url: "Musics/Hon khap noi - Vu Tu Boi cover.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Nakamura Maiko",
-      name: "Endless Tears",
-      url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
-      picture: "./Background/anh7.jpg",
-    },
-    {
-      artist: "Fiona Fung",
-      name: "A Little Love",
-      url: "Musics/A Little Love.mp3",
-      picture: "./Background/anh1.jpg",
-    },
-    {
-      artist: "Lost Frequencies, Janieck Devy",
-      name: "Reality",
-      url: "Musics/Reality - Lost Frequencies, Janieck Devy.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Bích Phương",
-      name: "Mình Yêu Nhau Đi",
-      url: "Musics/Minh Yeu Nhau Di - Bich Phuong.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Kha",
-      name: "Em Có Nghe",
-      url: "Musics/Em Co Nghe - Kha.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "911",
-      name: "I Do",
-      url: "Musics/I Do - 911.mp3",
-      picture: "./Background/anh11.jpg",
-    },
-    {
-      artist: "HuyR",
-      name: "Anh Thanh Niên",
-      url: "Musics/Anh Thanh Nien - HuyR.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Tiên Tiên",
-      name: "My Everything",
-      url: "Musics/My Everything - Tiên Tiên.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Ngọt",
-      name: "Lần Cuối",
-      url: "Musics/Lan Cuoi - Ngot.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Alan Walker, Sabrina Carpent",
-      name: "On My Way",
-      url: "Musics/On My Way - Alan Walker_ Sabrina Carpent.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Trịnh Thăng Bình",
-      name: "Người Ấy",
-      url: "Musics/Nguoi Ay - Trinh Thang Binh.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Hoàng Tôn - Yanbi",
-      name: "Em Không Quay Về",
-      url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Passenger",
-      name: "Let Her Go",
-      url: "Musics/Let Her Go - Passenger.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
-      artist: "Michael Jackson",
-      name: "You Are Not Alone",
-      url: "Musics/YouAreNotAlone_MichaelJackson_nb.mp3",
-      picture: "./Background/anh8.jpg",
-    },
-    {
       artist: "Dig Didzay",
       name: "Nếu Anh Đi (Cover)",
       url: "Musics/NeuAnhDi.mp3",
@@ -385,13 +259,139 @@ $(function () {
       url: "Musics/Gac Lai Au Lo - Da LAB_ Miu Le.mp3",
       picture: "./Background/anh8.jpg",
     },
+    {
+      artist: "Trung Quân",
+      name: "Chiều Nay Không Có Mưa Bay",
+      url: "Musics/Chieu Nay Khong Co Mua Bay - Trung Quan.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Sơn Tùng M-TP",
+      name: "Âm Thầm Bên Em",
+      url: "Musics/Âm Thầm Bên Em - Sơn Tùng M-TP_Lời Bài Hát.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "The Sheep",
+      name: "Người Ta Thành Đôi Hết Rồi",
+      url: "Musics/Nguoi Ta Thanh Doi Het Roi - The Sheep_.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Min",
+      name: "Y.Ê.U",
+      url: "Musics/Y E U Acoustic Version - Min.mp3",
+      picture: "./Background/anh15.jpg",
+    },
+    {
+      artist: "Charlie Puth",
+      name: "One Call Away",
+      url: "Musics/One Call Away - Charlie Puth [MP3 320kbps].mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Daoko - Kenshi Yonezu",
+      name: "Uchiage Hanabi",
+      url: "Musics/Uchiage Hanabi - Daoko, Kenshi Yonezu.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Vu Tử Bối",
+      name: "Hôn Khắp Nơi",
+      url: "Musics/Hon khap noi - Vu Tu Boi cover.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Nakamura Maiko",
+      name: "Endless Tears",
+      url: "Musics/Endless Tears - Nakamura Maiko CLIFF EDGE.mp3",
+      picture: "./Background/anh7.jpg",
+    },
+    {
+      artist: "Fiona Fung",
+      name: "A Little Love",
+      url: "Musics/A Little Love.mp3",
+      picture: "./Background/anh1.jpg",
+    },
+    {
+      artist: "Lost Frequencies, Janieck Devy",
+      name: "Reality",
+      url: "Musics/Reality - Lost Frequencies, Janieck Devy.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Bích Phương",
+      name: "Mình Yêu Nhau Đi",
+      url: "Musics/Minh Yeu Nhau Di - Bich Phuong.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Kha",
+      name: "Em Có Nghe",
+      url: "Musics/Em Co Nghe - Kha.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "911",
+      name: "I Do",
+      url: "Musics/I Do - 911.mp3",
+      picture: "./Background/anh11.jpg",
+    },
+    {
+      artist: "HuyR",
+      name: "Anh Thanh Niên",
+      url: "Musics/Anh Thanh Nien - HuyR.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Tiên Tiên",
+      name: "My Everything",
+      url: "Musics/My Everything - Tiên Tiên.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Ngọt",
+      name: "Lần Cuối",
+      url: "Musics/Lan Cuoi - Ngot.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Alan Walker, Sabrina Carpent",
+      name: "On My Way",
+      url: "Musics/On My Way - Alan Walker_ Sabrina Carpent.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Trịnh Thăng Bình",
+      name: "Người Ấy",
+      url: "Musics/Nguoi Ay - Trinh Thang Binh.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Hoàng Tôn - Yanbi",
+      name: "Em Không Quay Về",
+      url: "Musics/Em Khong Quay Ve - Hoang Ton Yanbi.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Passenger",
+      name: "Let Her Go",
+      url: "Musics/Let Her Go - Passenger.mp3",
+      picture: "./Background/anh8.jpg",
+    },
+    {
+      artist: "Michael Jackson",
+      name: "You Are Not Alone",
+      url: "Musics/YouAreNotAlone_MichaelJackson_nb.mp3",
+      picture: "./Background/anh8.jpg",
+    },
   ];
 
   function shuffle(a) {
     var j, x, i;
-    for (i = a.length - 1; i > 20; i--) {
+    for (i = a.length - 22; i > 0; i--) {
       //j = Math.floor(Math.random() * (i + 1)); //sort all
-      j = Math.floor(Math.random() * (i - 21 + 1)) + 21; // sort from 21 to end. **secret**
+      j = Math.floor(Math.random() * (i + 1)); // **secret**
       x = a[i];
       a[i] = a[j];
       a[j] = x;
