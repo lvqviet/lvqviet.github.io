@@ -24,7 +24,7 @@ body {
   right: -30px;
   bottom: -30px;
   left: -30px;
-  background-image: url("./Background/bg2.jpg");
+  background-image: url('./Background/bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -151,7 +151,7 @@ body {
 }
 
 #seek-bar {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -193,7 +193,7 @@ body {
 }
 
 #album-art:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 0;
@@ -356,7 +356,8 @@ body {
 }
 
 #message {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    serif;
   font-size: 3.8rem;
   color: #000000;
   font-style: italic;

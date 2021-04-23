@@ -672,7 +672,7 @@ changeBg.onclick = () => {
   if (divBg.id === "1") {
     divBg.setAttribute(
       "style",
-      'background-image: url("./Background/bg1.jpg"); background-position: 50% 20%'
+      'background-image: url("./Background/bg1.jpg"); background-position: 50% 20%; transition: all 1s ease'
     );
     //$(".bg-artwork").css("background-image", 'url("./Background/bg1.jpg")'); cach dung jQuery
     divBg.id = "2";
