@@ -391,7 +391,7 @@ $(function () {
     var j, x, i;
     for (i = a.length - 22; i > 0; i--) {
       //j = Math.floor(Math.random() * (i + 1)); //sort all
-      j = Math.floor(Math.random() * (i + 1)); // **secret**
+      j = Math.floor(Math.random() * (i + 1)); // ** magic 👀 **
       x = a[i];
       a[i] = a[j];
       a[j] = x;
@@ -407,7 +407,10 @@ $(function () {
         albumArt.addClass("active");
         checkBuffering();
         i.attr("class", "fas fa-pause");
+
         audio.play();
+        audioCtx.resume();
+        mainloop();
       } else {
         playerTrack.removeClass("active");
         albumArt.removeClass("active");
@@ -500,7 +503,12 @@ $(function () {
     if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
     else tTime.text(durMinutes + ":" + durSeconds);
 
-    if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
+    if (
+      isNaN(curMinutes) ||
+      isNaN(curSeconds) ||
+      isNaN(durMinutes) ||
+      isNaN(durSeconds)
+    )
       trackTime.removeClass("active");
     else trackTime.addClass("active");
 
@@ -539,6 +547,9 @@ $(function () {
     }
 
     if (currIndex > -1 && currIndex < songs.length) {
+      // var currentTrack = $(`#song${index}`);
+      // currentTrack.attr("class", "song fas fa-pause")
+
       if (flag == 0) i.attr("class", "fa fa-play");
       else {
         albumArt.removeClass("buffering");
@@ -587,6 +598,14 @@ $(function () {
 
   function initPlayer() {
     audio = new Audio();
+    audio.volume = 0.5;
+    // audio visualizer
+    audioCtx = new AudioContext();
+    analyser = audioCtx.createAnalyser();
+    source = audioCtx.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
     addSongList();
     selectTrack(0);
 
@@ -660,6 +679,7 @@ const message = document.querySelector("#message");
 const hideshow = document.querySelector("#hide-show");
 const divBg = document.querySelector(".bg-artwork");
 const changeBg = document.querySelector(".change-bg");
+const inputBg = document.querySelector("#input-bg");
 
 buttonYes.onclick = () => {
   message.innerText = "Thanks, I Love You <3";
@@ -668,19 +688,32 @@ buttonYes.onclick = () => {
   //buttonNo.style.display = 'none';
 };
 
-changeBg.onclick = () => {
-  if (divBg.id === "1") {
-    divBg.setAttribute(
-      "style",
-      'background-image: url("./Background/bg1.jpg"); background-position: 50% 20%; transition: all 1s ease'
-    );
-    //$(".bg-artwork").css("background-image", 'url("./Background/bg1.jpg")'); cach dung jQuery
-    divBg.id = "2";
-  } else {
-    divBg.setAttribute("style", "background-position: 50%");
-    divBg.id = "1";
+// changeBg.onclick = () => {
+//   if (divBg.id === "1") {
+//     divBg.setAttribute(
+//       "style",
+//       'background-image: url("./Background/bg1.jpg"); background-position: 50% 20%; transition: all 1s ease'
+//     );
+//     //$(".bg-artwork").css("background-image", 'url("./Background/bg1.jpg")'); cach dung jQuery
+//     divBg.id = "2";
+//   } else {
+//     divBg.setAttribute("style", "background-position: 50%");
+//     divBg.id = "1";
+//   }
+// };
+inputBg.onchange = function(input) {
+  console.log('====================================');
+  console.log(this);
+  console.log('====================================');
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('.bg-artwork')
+      .attr('src', e.target.result);
+    };
+    reader.readAsDataURL(this.files[0]);
   }
-};
+}
 
 window.addEventListener("keyup", hide, false);
 window.addEventListener("keyup", show, false);
@@ -711,4 +744,116 @@ function show(key) {
   }
 }
 
-console.log("I have a little secret, can you find it? (☞ﾟヮﾟ)☞");
+console.log(
+  "I have a little secret, can you find it? (☞ﾟヮﾟ)☞\nhint: listen to the whole playlist over and over 🎧🎧🎧"
+);
+
+// volume slider
+$(".slider-circle").draggable({
+  axis: "x",
+  containment: ".slider-bar",
+  drag: function (event) {
+    const SLIDER_BAR_UNITS = 3;
+    var start_left = parseInt($(".slider-bar").css("margin-left"));
+    var alpha =
+      (($(".slider-circle").position().left - start_left) / SLIDER_BAR_UNITS) *
+      0.01;
+    if (alpha <= 1 && alpha >= 0) {
+      audio.volume = alpha.toFixed(3);
+    }
+  },
+});
+
+let isLoading = false;
+$(".slider-circle").on("drag", function (event, ui) {
+  if (ui.position.left >= 275.5) {
+    // maybe >= 280
+    $(".slider-circle").addClass("drop");
+    $(".oops").addClass("show-oops");
+  } else {
+    $(".slider-circle").removeClass("drop");
+    $(".oops").removeClass("show-oops");
+    ui.position.top = -5;
+  }
+});
+
+// audio visualizer
+var BAR_PAD = 10;
+var BAR_WIDTH = 5;
+var MAX_BARS = 70;
+var MAX_BG_SCALE = 20;
+var SMOOTHING_SAMPLES = 10;
+
+var bg = document.querySelector(".bg-artwork");
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var audioCtx, analyser, source;
+
+canvas.width = window.innerWidth * 0.8;
+canvas.height = window.innerHeight * 0.3;
+
+window.onresize = function () {
+  canvas.width = window.innerWidth * 0.8;
+  canvas.height = window.innerHeight * 0.3;
+};
+
+function draw_bars(values) {
+  var len = values.length - ~~(values.length / MAX_BARS) * 4;
+  var normFac = 255;
+  var maxValue = normFac;
+  var istep = ~~(len / MAX_BARS);
+  var step = canvas.width / MAX_BARS;
+  var x = BAR_WIDTH;
+  var height = canvas.height - BAR_PAD * 2;
+
+  for (var i = 0; i < len; i += istep) {
+    var v = values[i] / maxValue;
+    var h = v * height;
+    var y = height / 2 - h / 2;
+    ctx.beginPath();
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+    ctx.shadowBlur = 8;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 4;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.9)";
+    ctx.lineWidth = BAR_WIDTH;
+    ctx.lineCap = "round";
+    ctx.moveTo(x, y);
+    ctx.lineTo(x, y + h);
+    ctx.stroke();
+    x += step;
+  }
+
+  // Background size change with bass
+  	// var fac = 0.0;
+  	// var div = 0;
+  	// for (var i = 0; i < len-SMOOTHING_SAMPLES; i++) {
+  	// 	var avgN = 0.0;
+  	// 	for (var j = 0; j < SMOOTHING_SAMPLES; j++) {
+  	// 		avgN += Math.abs(values[i+j] / maxValue * 2.0);
+  	// 	}
+  	// 	avgN /= SMOOTHING_SAMPLES;
+
+  	// 	fac += avgN;
+  	// 	div++;
+  	// }
+  	// fac /= div;
+  	// fac *= MAX_BG_SCALE;
+
+  	// var szW = ~~(150+fac);
+  	// var szH = ~~(100+fac);
+  	// var sz = szW.toString()+"% "+szH.toString()+"%";
+    // // bg.style.backgroundSize=sz;
+  	// bg.style.height=szH.toString()+"% ";
+  	// bg.style.width=szW.toString()+"% ";
+}
+
+function mainloop() {
+  var fbc = new Uint8Array(analyser.frequencyBinCount);
+  analyser.getByteFrequencyData(fbc);
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  draw_bars(fbc);
+
+  requestAnimationFrame(mainloop);
+}

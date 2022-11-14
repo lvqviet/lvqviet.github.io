@@ -20,7 +20,8 @@ body {
 
 .bg-artwork {
   position: fixed;
-  top: -30px;
+  align-self: center;
+  /* top: -30px;
   right: -30px;
   bottom: -30px;
   left: -30px;
@@ -28,8 +29,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  /*filter: blur(4px);
-    -webkit-filter: blur(4px);*/
+  background-size: cover; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  filter: blur(4px);
+    -webkit-filter: blur(4px);
   z-index: 1;
   transition: all 0.35s ease-in-out 0s;
 }
@@ -204,7 +211,8 @@ body {
   background-color: #d6dee7;
   border-radius: 50%;
   box-shadow: inset 0 0 0 2px #fff;
-  z-index: 1; /*bo hinh tron o giua */
+  z-index: 1;
+  /*bo hinh tron o giua */
 }
 
 #album-art img {
@@ -234,6 +242,7 @@ body {
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
   }
+
   100% {
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
@@ -245,6 +254,7 @@ body {
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
   }
+
   100% {
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
@@ -345,6 +355,7 @@ body {
   from {
     opacity: 0.6;
   }
+
   to {
     opacity: 1;
   }
@@ -359,15 +370,15 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
     serif;
   font-size: 3.8rem;
-  color: #000000;
+  color: #333333;
   font-style: italic;
+  justify-content: center;
+  position: absolute;
   font-weight: 700;
   display: flex;
   width: 100%;
-  justify-content: center;
-  margin-top: 36.5rem;
+  bottom: 20%;
   z-index: 3;
-  position: relative;
 }
 
 #list-song {
@@ -416,6 +427,7 @@ body {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 0.5px;
+  color: #333333;
 }
 
 .song i {
@@ -437,60 +449,85 @@ body {
 
 #button-no {
   position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    serif;
+  color: #333333;
+  font-size: 17px;
+  font-weight: 500;
   background-color: #ffffff;
-  margin-top: 20px;
-  margin-left: 20px;
-  left: 50%;
+  bottom: 10%;
+  left: 40%;
   width: 80px;
   height: 30px;
   border-radius: 20px;
-  z-index: 3;
+  z-index: 5;
   cursor: pointer;
 }
 
 #button-yes {
   position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    serif;
+  color: #333333;
+  font-size: 17px;
+  font-weight: 500;
   background-color: #ffffff;
-  margin-top: 20px;
-  left: 42%;
+  bottom: 10%;
+  right: 40%;
   width: 80px;
   height: 30px;
   border-radius: 20px;
-  z-index: 3;
+  z-index: 5;
   cursor: pointer;
 }
 
 .change-bg {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
   background-color: #fff;
-  border: 0;
-  padding: 8px 15px;
-  border-radius: 3px;
+  color: #333;
+  border: 2px solid #333;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 12px;
   cursor: pointer;
-  box-shadow: 3px 3px 10px 0;
-  z-index: 3;
+  z-index: 4;
+}
+
+.change-bg:hover::before {
+  width: 100%;
 }
 
 #hide-show {
-  position: relative;
-  left: -145px;
-  bottom: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding-right: 12px;
   z-index: 3;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (hover: none) and (pointer: coarse) {
+
   #message,
   #button-yes,
   #button-no,
-  #hide-show {
+  #hide-show,
+  .volume-container {
     display: none;
   }
+
 }
 
 @keyframes fade {
   from {
     opacity: 100%;
   }
+
   to {
     opacity: 0%;
   }
@@ -500,7 +537,145 @@ body {
   from {
     opacity: 0%;
   }
+
   to {
     opacity: 100%;
   }
+}
+
+.volume-container {
+  z-index: 3;
+  position: absolute;
+  /* height: 100px; */
+  height: 8vh;
+  bottom: 0;
+  width: 100%;
+}
+
+.slider-bar {
+  width: 298px;
+  height: 10px;
+  background-color: dimgray;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.slider-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid dimgray;
+  top: -5px;
+  left: 140px;
+  background: radial-gradient(circle, white 40%, #BEBEC1);
+}
+
+.oops {
+  display: none;
+}
+
+.show-oops {
+  position: absolute;
+  margin-left: 310px;
+  top: -7px;
+  display: inline-block;
+}
+
+.drop {
+  top: 80px;
+  animation: drop 1.5s linear forwards;
+}
+
+@keyframes drop {
+  /* 0% {
+    top: 0px;
+    left: 280px;
+  }
+
+  15% {
+    top: 80px;
+    left: 290px;
+  }
+
+  25% {
+    top: 60px;
+    left: 305px;
+  }
+
+  30% {
+    top: 60px;
+    left: 310px;
+  }
+
+  45% {
+    top: 80px;
+    left: 325px;
+  }
+
+
+  65% {
+    top: 80px;
+    left: 345px;
+  }
+
+  90% {
+    top: 80px;
+    left: 355px;
+  }
+
+  100% {
+    top: 80px;
+    left: 358px;
+  } */
+  0% {
+    top: 0px;
+    left: 280px;
+  }
+
+  15% {
+    top: 6.4vh;
+    left: 290px;
+  }
+
+  25% {
+    top: 4.8vh;
+    left: 305px;
+  }
+
+  30% {
+    top: 4.8vh;
+    left: 310px;
+  }
+
+  45% {
+    top: 6.4vh;
+    left: 325px;
+  }
+
+
+  65% {
+    top: 6.4vh;
+    left: 345px;
+  }
+
+  90% {
+    top: 6.4vh;
+    left: 355px;
+  }
+
+  100% {
+    top: 6.4vh;
+    left: 358px;
+  }
+}
+
+#canvas {
+  position: absolute;
+  z-index: 3;
+  margin: 0 10vw 0 10vw;
+}
+
+#input-bg {
+  display: none;
 }
