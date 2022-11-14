@@ -511,6 +511,10 @@ body {
   z-index: 3;
 }
 
+#note {
+  display: none;
+}
+
 @media only screen and (hover: none) and (pointer: coarse) {
 
   #message,
@@ -519,6 +523,16 @@ body {
   #hide-show,
   .volume-container {
     display: none;
+  }
+
+  #note {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding-right: 12px;
+    z-index: 3;
   }
 
 }
